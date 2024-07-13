@@ -70,29 +70,76 @@ const newUser = new User ({
 
 //CREATE
 
-User.create({
-  username : 'Vansh' ,
-  age : 23 ,
-  birthday : new Date ('2000-10-23') ,
-  isActive : true ,
-  hobbies : ['travelling' , 'music' , 'coding'] ,
-  objectId : new mongoose.Types.ObjectId() ,
-  address : {
-    street : 'Saheban Hata' ,
-    city : 'Purnia' ,
-    postCode : 854301 ,
-    },
-    customData : {
-      country  : 'India' ,
+// User.create({
+//   username : 'Vansh' ,
+//   age : 23 ,
+//   birthday : new Date ('2000-10-23') ,
+//   isActive : true ,
+//   hobbies : ['travelling' , 'music' , 'coding'] ,
+//   objectId : new mongoose.Types.ObjectId() ,
+//   address : {
+//     street : 'Saheban Hata' ,
+//     city : 'Purnia' ,
+//     postCode : 854301 ,
+//     },
+//     customData : {
+//       country  : 'India' ,
       
-      },
-      })
-      .then((data)=>
-      {
-console.log(data);
-      }) 
-      .catch((e) => console.log(e));
+//       },
+//       })
+//       .then((data)=>
+//       {
+// console.log(data);
+//       }) 
+//       .catch((e) => console.log(e));
 
+//INSERTMANY
+
+User.insertMany([
+  {
+    
+      username : 'Sunny' ,
+      age : 23 ,
+      birthday : new Date ('2000-02-26') ,
+      isActive : true ,
+      hobbies : ['travelling' , 'music' , 'coding'] ,
+      objectId : new mongoose.Types.ObjectId() ,
+      address : {
+        street : 'Anokha Niwas' ,
+        city : 'Godda' ,
+        postCode : 824133,
+        },
+        customData : {
+          country  : 'India' ,
+          
+          },
+          },
+        {
+         
+            username : 'Yashendra' ,
+            age : 24 ,
+            birthday : new Date ('2000-10-23') ,
+            isActive : true ,
+            hobbies : ['travelling' , 'music' , 'coding'] ,
+            objectId : new mongoose.Types.ObjectId() ,
+            address : {
+              street : 'Saheban Hata' ,
+              city : 'Kanpur' ,
+              postCode : 854301 ,
+              },
+              customData : {
+                country  : 'India' ,
+                
+                },
+                }])
+          .then((data)=>
+          {
+    console.log(data);
+          }) 
+          .catch((e) => console.log(e));
+    
+      
+    
 
 
 
