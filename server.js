@@ -169,6 +169,30 @@ const User = mongoose.model ('User' , UserProfileSchema);
 //       findUsers();
 
 //---UPDATING DOCUMENTS-----//
+//update one
+
+// const updateDoc = async () =>
+// {
+//   try{
+//     const UpdatedDoc = await User.updateOne({username : 'Sunny'},{isActive : false},{ age :24},{new : true});
+
+// console.log(UpdatedDoc);
+//   }
+//   catch(error)
+//   {
+//     console.log(error);
+//   }
+  
+  
+// };
+// updateDoc();/
+
+// FIND BY ID AND UPDATE 
+
+
+
+
+
 
 
 
