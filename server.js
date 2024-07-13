@@ -45,23 +45,23 @@ const User = mongoose.model ('User' , UserProfileSchema);
 
 //CREATE A DOC - .save()
 
-const newUser = new User ({
-  username : 'Archie' ,
-  age : 23 ,
-  birthday : new Date ('2000-10-23') ,
-  isActive : true ,
-  hobbies : ['travelling' , 'music' , 'coding'] ,
-  objectId : new mongoose.Types.ObjectId() ,
-  address : {
-    street : 'Saheban Hata' ,
-    city : 'Purnia' ,
-    postCode : 854301 ,
-    },
-    customData : {
-      country  : 'India' ,
+// const newUser = new User ({
+//   username : 'Archie' ,
+//   age : 23 ,
+//   birthday : new Date ('2000-10-23') ,
+//   isActive : true ,
+//   hobbies : ['travelling' , 'music' , 'coding'] ,
+//   objectId : new mongoose.Types.ObjectId() ,
+//   address : {
+//     street : 'Saheban Hata' ,
+//     city : 'Purnia' ,
+//     postCode : 854301 ,
+//     },
+//     customData : {
+//       country  : 'India' ,
       
-      },
-      });
+//       },
+//       });
 //       newUser.save().then((data)=>
 //       {
 // console.log(data);
@@ -95,51 +95,81 @@ const newUser = new User ({
 
 //INSERTMANY
 
-User.insertMany([
-  {
+// User.insertMany([
+//   {
     
-      username : 'Sunny' ,
-      age : 23 ,
-      birthday : new Date ('2000-02-26') ,
-      isActive : true ,
-      hobbies : ['travelling' , 'music' , 'coding'] ,
-      objectId : new mongoose.Types.ObjectId() ,
-      address : {
-        street : 'Anokha Niwas' ,
-        city : 'Godda' ,
-        postCode : 824133,
-        },
-        customData : {
-          country  : 'India' ,
+//       username : 'Sunny' ,
+//       age : 23 ,
+//       birthday : new Date ('2000-02-26') ,
+//       isActive : true ,
+//       hobbies : ['travelling' , 'music' , 'coding'] ,
+//       objectId : new mongoose.Types.ObjectId() ,
+//       address : {
+//         street : 'Anokha Niwas' ,
+//         city : 'Godda' ,
+//         postCode : 824133,
+//         },
+//         customData : {
+//           country  : 'India' ,
           
-          },
-          },
-        {
+//           },
+//           },
+//         {
          
-            username : 'Yashendra' ,
-            age : 24 ,
-            birthday : new Date ('2000-10-23') ,
-            isActive : true ,
-            hobbies : ['travelling' , 'music' , 'coding'] ,
-            objectId : new mongoose.Types.ObjectId() ,
-            address : {
-              street : 'Saheban Hata' ,
-              city : 'Kanpur' ,
-              postCode : 854301 ,
-              },
-              customData : {
-                country  : 'India' ,
+//             username : 'Yashendra' ,
+//             age : 24 ,
+//             birthday : new Date ('2000-10-23') ,
+//             isActive : true ,
+//             hobbies : ['travelling' , 'music' , 'coding'] ,
+//             objectId : new mongoose.Types.ObjectId() ,
+//             address : {
+//               street : 'Saheban Hata' ,
+//               city : 'Kanpur' ,
+//               postCode : 854301 ,
+//               },
+//               customData : {
+//                 country  : 'India' ,
                 
-                },
-                }])
-          .then((data)=>
-          {
-    console.log(data);
-          }) 
-          .catch((e) => console.log(e));
+//                 },
+//                 }])
+//           .then((data)=>
+//           {
+//     console.log(data);
+//           }) 
+//           .catch((e) => console.log(e));
+    // where
+
+    // const findUsers = async () =>
+    // {
+    //   try{
+    //     const users = await User.find().where ('age').gte(30);
+    //     console.log(users);
+    //     }
+    //     catch(error)
+    //     {
+    //       console.log(error);
+    //     }
+    //   };
+
+    //   findUsers();
     
-      
-    
+//SORT
+// const findUsers = async () =>
+//     {
+//       try{
+//         const users = await User.find().where ('age').gte(20).sort({username :-1}).limit(1);
+//         console.log(users);
+//         }
+//         catch(error)
+//         {
+//           console.log(error);
+//         }
+//       };
+
+//       findUsers();
+
+//---UPDATING DOCUMENTS-----//
+
 
 
 
